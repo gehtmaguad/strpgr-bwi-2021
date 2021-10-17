@@ -1,4 +1,4 @@
-package Class7;
+package Class7.SlideExamples;
 
 public class AddTwo {
     public static void main(String[] args) {
