@@ -32,14 +32,28 @@ public class Main {
         for (i = 0; i < MAX; i++)
             System.out.printf("%5.1f\n", distance[i]);
 
+        System.out.printf("%-10s", "Node#");
+        System.out.printf("%-10s", "NodeA-Z");
+        System.out.printf("%-10s", "Distanz");
+        System.out.printf("%-10s", "Pred#");
+        System.out.printf("%-10s", "PredA-Z");
+        System.out.println();
+        for (i = 0; i < MAX; i++) {
+            System.out.printf("%-10d", i);
+            System.out.printf("%-10c", i + 'A');
+            System.out.printf("%-10.1f", distance[i]);
+            System.out.printf("%-10d", preced[i]);
+            System.out.printf("%-10c", preced[i] + 'A');
+            System.out.println();
+        }
+        System.out.println();
+
         int end = 9;
         int j = end;
-
         while (j != 0) {
             System.out.printf("%c <- ", j + 'A');
             j = preced[j];
         }
-
         System.out.printf("%c\n", 0 + 'A');
     }
 
